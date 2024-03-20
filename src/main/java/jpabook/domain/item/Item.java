@@ -1,7 +1,8 @@
 package jpabook.domain.item;
 
 import jakarta.persistence.*;
-import jdk.jfr.Category;
+
+import jpabook.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
