@@ -11,7 +11,8 @@ spring:
     properties:
       hibernate:
 #        show_sql: true
-      format_sql: true
+        format_sql: true
+        default_batch_fetch_size: 1000 #최적화 옵션
 
   thymeleaf:
     prefix: classpath:/templates/
@@ -19,3 +20,4 @@ spring:
 
 logging.level:
   org.hibernate.SQL: debug
+#  org.hibernate.type: trace
