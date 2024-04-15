@@ -1,4 +1,4 @@
-package jpabook.repository.order;
+package jpabook.repository.order.simplequery;
 
 import jakarta.persistence.EntityManager;
 import jpabook.repository.order.simplequery.OrderSimpleQueryDto;
