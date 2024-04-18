@@ -13,7 +13,7 @@ spring:
 #        show_sql: true
         format_sql: true
         default_batch_fetch_size: 100 #최적화 옵션
-    open-in-view: false
+#    open-in-view: false  트랜잭션 끝나면 영속성 컨텍스트 반환
 
   thymeleaf:
     prefix: classpath:/templates/
