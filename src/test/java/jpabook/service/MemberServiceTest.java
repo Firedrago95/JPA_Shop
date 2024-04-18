@@ -1,7 +1,7 @@
 package jpabook.service;
 
 import jpabook.domain.Member;
-import jpabook.repository.MemberRepository;
+import jpabook.repository.MemberRepositoryOld;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ class MemberServiceTest {
     @Autowired
     MemberService memberService;
     @Autowired
-    MemberRepository memberRepository;
+    MemberRepositoryOld memberRepository;
 
     @Test
     public void 회원가입() throws Exception {

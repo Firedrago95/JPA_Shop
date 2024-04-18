@@ -3,7 +3,7 @@ package jpabook.service;
 import jpabook.domain.*;
 import jpabook.domain.item.Item;
 import jpabook.repository.ItemRepository;
-import jpabook.repository.MemberRepository;
+import jpabook.repository.MemberRepositoryOld;
 import jpabook.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderService {
 
-    private final MemberRepository memberRepository;
+    private final MemberRepositoryOld memberRepository;
     private final OrderRepository orderRepository;
     private final ItemRepository itemRepository;
 

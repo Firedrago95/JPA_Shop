@@ -1,7 +1,8 @@
 package jpabook.service;
 
 import jpabook.domain.Member;
-import jpabook.repository.MemberRepository;
+import jpabook.repository.MemberRepositoryOld;
+import jpabook.repository.order.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,7 +31,7 @@ public class MemberService {
      */
     @Transactional
     public void update(Long id, String name) {
-        Member member = memberRepository.findOne(id);
+        Member member = memberRepository.findById(id).orElseThrow();
         member.setName(name);
     }
 
@@ -49,6 +50,6 @@ public class MemberService {
     }
 
     public Member findOne(Long memberId) {
-        return memberRepository.findOne(memberId);
+        return memberRepository.findById(memberId).orElseThrow();
     }
 }
